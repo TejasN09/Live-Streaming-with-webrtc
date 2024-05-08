@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/bower_components/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/bower_components/demo-console/index.css" />
+    <!-- <link rel="stylesheet" href="/css/kurento.css" /> -->
+    <link
+      rel="stylesheet"
+      href="/bower_components/ekko-lightbox/dist/ekko-lightbox.min.css"
+    />
+    <style>
+      /* Hide the console */
+      #console {
+        display: none;
+        position: absolute;
+        z-index: -1;
+      }
+
+      #call {
+        display: none;
+      }
+
+      #videoBig {
+        margin-top: 70px; 
+        width: 100%;
+        height: 100%;
+      }
+
+      #video {
+        width: 100%; 
+        height: 100%;
+      }
+
+
+    </style>
+
+    <script src="/bower_components/webrtc-adapter/release/adapter.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/demo-console/index.js"></script>
+    <script src="/bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <script src="/bower_components/kurento-utils/js/kurento-utils.js"></script>
+    <script src="/js/index.js"></script>
+    <title>Kurento Tutorial 3: Video Call 1 to N with WebRTC</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-12" style="position: absolute; margin-top: 15px;">
+              <a
+                id="call"
+                href="#"
+                class="btn btn-success"
+                style="display: none"
+              >
+                <span class="glyphicon glyphicon-play"></span> Start
+                Broadcasting</a
+              >
+              <a id="viewer" href="#" class="btn btn-primary">
+                <span class="glyphicon glyphicon-user"></span>Join Live</a
+              >
+              <a id="terminate" href="#" class="btn btn-danger">
+                <span class="glyphicon glyphicon-stop"></span> Stop</a
+              >
+            </div>
+          </div>
+          <br />
+          <label class="control-label" for="console" style="display: none"
+            >Console</label
+          ><br /><br />
+          <div id="console" class="democonsole" style="display: none">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="">
+          <div id="videoBig">
+            <video
+              id="video"
+              autoplay
+              width="1280px"
+              height="720px"
+              poster=""
+              controls
+            ></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
